@@ -1,0 +1,12 @@
+-- LocalScript
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Event = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Framework"):WaitForChild("Network"):WaitForChild("Remote"):WaitForChild("Event")
+
+local args = {
+    [1] = "SellBubble"
+}
+
+while true do
+    Event:FireServer(unpack(args))
+    task.wait(0.5)
+end
